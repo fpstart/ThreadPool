@@ -28,6 +28,9 @@ namespace zeroref
     private:
     std::forward_list<std::thread> mThreadList;
     std::queue<std::function<void()>> mTaskList;
+    std::atomic<bool> isStop;
+    std::mutex mTaskLock;
+    std::condition_variable mTaskCond;
   };
 };
 
