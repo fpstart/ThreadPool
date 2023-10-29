@@ -13,5 +13,5 @@ namespace zeroref
       auto execute(FUNC func,ARGS... args);
   }
 }
-#include "./ThreadPool.cpp"
+
 #endif
