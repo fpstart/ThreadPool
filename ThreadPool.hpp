@@ -7,7 +7,9 @@ namespace zeroref
   class ThreadPool
   {
     public:
-      ThreadPool(int coreThreadNum,int maxThreadNum,std::chrono::duration<double,std::ratio<1,1000>> keepAliveTime)
+      ThreadPool(int coreThreadNum,int maxThreadNum,std::chrono::duration<double,std::ratio<1,1000>> keepAliveTime);
+      ~ThreadPool();
+      template <typename FUNC,typename... ARGS>
   }
 }
 #include "./ThreadPool.cpp"
