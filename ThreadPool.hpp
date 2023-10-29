@@ -11,6 +11,7 @@
 #include <deque>
 #include <queue>
 #include <memory>
+#include <function>
 namespace zeroref
 {
   class ThreadPool
@@ -26,7 +27,8 @@ namespace zeroref
     void coreThread();
     void tempThread();
     private:
-
+    std::forward_list<std::thread> mThreadList;
+    std::queue<std::function<void()>> mTaskList;
   };
 };
 
