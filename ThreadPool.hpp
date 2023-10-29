@@ -2,6 +2,15 @@
 #define __ZEROREF_THREADPOOL_H__
 #include <chrono>
 #include <ratio>
+#include <thread>
+#include <atomic>
+#include <mutex>
+#include <condition_variable>
+#include <future>
+#include <vector>
+#include <deque>
+#include <queue>
+#include <memory>
 namespace zeroref
 {
   class ThreadPool
