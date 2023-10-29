@@ -19,8 +19,7 @@ namespace zeroref
     public:
     ThreadPool(int coreThreadNum, int maxThreadNum, std::chrono::duration < double, std::ratio < 1, 1000>> keepAliveTime);
     ~ThreadPool();
-    template < typename FUNC,
-    typename... ARGS >
+    template < typename FUNC,typename... ARGS >
     auto execute(FUNC func, ARGS... args) -> std::future < std::result_of(FUNC(ARGS...)) >
     void stop();
     protected:
